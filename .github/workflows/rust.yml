@@ -1,0 +1,32 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+    - name: Onnx Etc Cache
+      uses: actions/cache@v4
+      id: onnx-etc-cache
+      with:
+        path: data
+        key: onnx-etc-cache
+    - name: Install newest toolchain
+      run: rustup update stable && rustup default stable
+    - name: Build
+      run: cargo build --verbose -F download-data
+    - name: Run tests
+      run: cargo test --verbose -F download-data

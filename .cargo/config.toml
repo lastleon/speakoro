@@ -1,0 +1,4 @@
+[env]
+# See https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX/tree/main/onnx for a list of available options. Note that not all models work, you have to test that out.
+# Recommendations: model.onnx, model_fp16.onnx, model_uint8.onnx
+SPEAKORO_MODEL_FILE = "model.onnx"
