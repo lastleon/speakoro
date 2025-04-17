@@ -130,12 +130,11 @@ Arguments:
   <text>  Pass the text that should be converted to speech. If the flag --phonemes is set, this will be interpreted as raw phonemes.
 
 Options:
-  -v, --voice <voice>  Set which voice should be used to generate audio. [default: af_bella] [possible values: af_bella, af_heart, af_nicole, am_adam, bf_alice, bf_emma]
+  -v, --voice <voice>  Set which voice should be used to generate audio. [default: af_bella] [possible values: af_heart, af_bella, af_nicole, af_aoede, bf_emma, bf_isabella, am_adam, am_fenrir, bm_daniel]
   -p, --phonemes       If set, the passed text will be interpreted as phonemes.
   -o, --out <out>      Set filepath to where the audio will be written to. Note that the output format is WAV. [default: audio.wav]
   -h, --help           Print help
   -V, --version        Print version
-
 ```
 
 **Offline Build:**
